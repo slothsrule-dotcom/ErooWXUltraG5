@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eroo WX Ultra G5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" type="image/png" href="ultra_logo.png">
+</head>
+<body>
+    <nav class="navbar">
+        <img id="title" src="ultra_logo.png">
+        <p>Eroo WX Ultra G5</p>
+    </nav>
+    <div class="content">
+    <div class="graphicDisplay">
+        <div class="7dayForecast">
+            <div class="gradient">
+                <div id="top"></div>
+        </div>
+            <div class="title">
+                <div id="left">
+                <h1>7-Day Forecast</h1>
+            </div>
+            <div id="right">
+                <h5 id="norm-high" style="font-weight: 500;">Normal High <strong style="font-weight: 800;">Null</strong></h5>
+                <h5 id="norm-low" style="margin-right: 90px; font-weight: 500;">Normal Low <strong style="font-weight: 800;">Null</strong></h5>
+            </div>
+            <img src="eroo_logo.png" id="image">
+            </div>
+            <div class="dayCards">
+                <div class="day-one">
+                    <div id="date-one">
+                        <h2>MON</h2>
+                    </div>
+                <div id="img-one" class="icon-container">
+                    <img src="icons/sunny.png" id="day-one-main" class="main-icon">
+                    <img src="" id="day-one-sec" class="secondary-icon" style="display: none;">
+                </div>
+                    <h3 id="cond-one" style="margin-bottom: 7.5px;">Subtext here</h3>
+                    <h1 id="high-one">77</h1>
+                    <h2 id="low-one" style="margin-top: 7px">53</h2>
+                </div>
+                <div class="day-two">
+                    <div id="date-two">
+                        <h2>TUE</h2>
+                    </div>
+                    <div id="img-two">
+                        <img src="icons/sunny.png" id="img">
+                    </div>
+                    <h3 id="cond-two" style="margin-bottom: 7.5px;">Subtext here</h3>
+                    <h1 id="high-two">NaN</h1>
+                    <h2 id="low-two" style="margin-top: 7px">53</h2>
+                </div>
+                <div class="day-three">
+                    <div id="date-three">
+                        <h2>WED</h2>
+                    </div>
+                    <div id="img-three">
+                        <img src="icons/sunny.png" id="img">
+                    </div>
+                    <h3 id="cond-three" style="margin-bottom: 7.5px;">Subtext here</h3>
+                    <h1 id="high-three">NaN</h1>
+                    <h2 id="low-three" style="margin-top: 7px">53</h2>
+                </div>
+                <div class="day-four">
+                    <div id="date-four">
+                        <h2>THU</h2>
+                    </div>
+                    <div id="img-four">
+                        <img src="icons/sunny.png" id="img">
+                    </div>
+                    <h3 id="cond-four" style="margin-bottom: 7.5px;">Subtext here</h3>
+                    <h1 id="high-four">NaN</h1>
+                    <h2 id="low-four" style="margin-top: 7px">53</h2>
+                </div>
+                <div class="day-five">
+                    <div id="date-five">
+                        <h2>FRI</h2>
+                    </div>
+                    <div id="img-five">
+                        <img src="icons/sunny.png" id="img">
+                    </div>
+                    <h3 id="cond-five" style="margin-bottom: 7.5px;">Subtext here</h3>
+                    <h1 id="high-five">NaN</h1>
+                    <h2 id="low-five" style="margin-top: 7px">53</h2>
+                </div>
+                <div class="day-six">
+                    <div id="date-six">
+                        <h2>SAT</h2>
+                    </div>
+                    <div id="img-six">
+                        <img src="icons/sunny.png" id="img">
+                    </div>
+                    <h3 id="cond-six" style="margin-bottom: 7.5px;">Subtext here</h3>
+                    <h1 id="high-six">NaN</h1>
+                    <h2 id="low-six" style="margin-top: 7px">53</h2>
+                </div>
+                <div class="day-seven">
+                    <div id="date-seven">
+                        <h2>SUN</h2>
+                    </div>
+                    <div id="img-seven">
+                        <img src="icons/sunny.png" id="img">
+                    </div>
+                    <h3 id="cond-seven" style="margin-bottom: 7.5px;">Subtext here</h3>
+                    <h1 id="high-seven">NaN</h1>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <h1>No active alerts</h1>
+                    <h2>Enjoy the week ahead!</h2>
+                </div>
+                <div class="bottom-right">
+                    <h3>Find our website</h3>
+                    <h1>erooweather.com</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="inputs">
+        <h2>7 Day Forecast</h2>
+
+        <input type="text" placeholder="Day 1 Text" id="day-one-text">
+        <input type="text" placeholder="Day 1 High" id="day-one-high">
+        <input type="text" placeholder="Day 1 Low" id="day-one-low">
+        <select id="day-one-icon" nchange="checkCustomIcon('one')">
+            <option value="">--Choose an option--</option>
+            <option value="sunny.png">Sunny</option>
+            <option value="mostly-sunny.png">Mostly Sunny</option>
+            <option value="partly-sunny.png">Partly Sunny</option>
+            <option value="mostly-cloudy.png">Mostly Cloudy</option>
+            <option value="hazy-sunshine.png">Hazy Sunshine</option>
+            <option value="mostly-sunny-rain.png">Mostly Sunny w/ Rain</option>
+            <option value="mostly-sunny-dark-rain.png">Mostly Sunny w/ Dark Rain</option>
+            <option value="mostly-sunny-snow.png">Mostly Sunny w/ Snow</option>
+            <option value="mostly-sunny-dark-snowy.png">Mostly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-rain.png">Partly Sunny w/ Rain</option>
+            <option value="partly-sunny-dark-rain.png">Partly Sunny w/ Dark Rain</option>
+            <option value="partly-sunny-snowy.png">Partly Sunny w/ Snow</option>
+            <option value="partly-sunny-dark-snow.png">Partly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-mixed-precip.png">Partly Sunny w/ Mixed Precip</option>
+            <option value="partly-sunny-dark-mixed-precip.png">Partly Sunny w/ Dark Mixed Precip</option>
+            <option value="cloudy.png">Cloud</option>
+            <option value="dark-cloudy.png">Dark Cloud</option>
+            <option value="rainy.png">Rainy</option>
+            <option value="dark-rainy.png">Dark Rainy</option>
+            <option value="snowy.png">Snowy</option>
+            <option value="dark-snowy.png">Dark Snowy</option>
+            <option value="big-snow.png">Big Snowflake</option>
+            <option value="icy.png">Big Ice</option>
+            <option value="mixed-precip.png">Mixed Precip</option>
+            <option value="dark-mixed-precip.png">Dark Mixed Precip</option>
+            <option value="rainy-tstorm.png">Rainy w/ Lightning</option>
+            <option value="dark-rainy-storm.png">Rainy w/ Lightning Dark</option>
+            <option value="tstorm.png">Lightning</option>
+            <option value="dark-tstorm.png">Dark Lightning</option>
+        </select>
+        <input type="file" id="day-one-file" accept="image/*" onchange="handleCustomUpload('one', event)">
+        <select id="day-one-day">
+            <option value="">--Choose an option--</option>
+            <option value="MON">Monday</option>
+            <option value="TUE">Tuesday</option>
+            <option value="WED">Wednesday</option>
+            <option value="THU">Thursday</option>
+            <option value="FRI">Friday</option>
+            <option value="SAT">Saturday</option>
+            <option value="SUN">Sunday</option>
+        </select>
+        <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Global Teal Tone: <input type="color" id="global-teal-picker" value="#A9F2E8" onchange="updateGlobalColor(event)"></label>
+            <label>Day 1 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
+        </div>
+        <div class="secondary-icon-upload">
+    <p>Choose Day 1 Secondary Icon (Severe Weather Badge)</p>
+    <input type="file" id="day-one-sec-file" accept="image/*" onchange="handleSecondaryUpload('one', event)">
+</div>
+    <br>
+    <input type="text" placeholder="Day 2 Text" id="day-two-text">
+        <input type="text" placeholder="Day 2 High" id="day-two-high">
+        <input type="text" placeholder="Day 2 Low" id="day-two-low">
+        <select id="day-two-icon">
+            <option value="">--Choose an option--</option>
+            <option value="sunny.png">Sunny</option>
+            <option value="mostly-sunny.png">Mostly Sunny</option>
+            <option value="partly-sunny.png">Partly Sunny</option>
+            <option value="mostly-cloudy.png">Mostly Cloudy</option>
+            <option value="hazy-sunshine.png">Hazy Sunshine</option>
+            <option value="mostly-sunny-rain.png">Mostly Sunny w/ Rain</option>
+            <option value="mostly-sunny-dark-rain.png">Mostly Sunny w/ Dark Rain</option>
+            <option value="mostly-sunny-snow.png">Mostly Sunny w/ Snow</option>
+            <option value="mostly-sunny-dark-snowy.png">Mostly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-rain.png">Partly Sunny w/ Rain</option>
+            <option value="partly-sunny-dark-rain.png">Partly Sunny w/ Dark Rain</option>
+            <option value="partly-sunny-snowy.png">Partly Sunny w/ Snow</option>
+            <option value="partly-sunny-dark-snow.png">Partly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-mixed-precip.png">Partly Sunny w/ Mixed Precip</option>
+            <option value="partly-sunny-dark-mixed-precip.png">Partly Sunny w/ Dark Mixed Precip</option>
+            <option value="cloudy.png">Cloud</option>
+            <option value="dark-cloudy.png">Dark Cloud</option>
+            <option value="rainy.png">Rainy</option>
+            <option value="dark-rainy.png">Dark Rainy</option>
+            <option value="snowy.png">Snowy</option>
+            <option value="dark-snowy.png">Dark Snowy</option>
+            <option value="big-snow.png">Big Snowflake</option>
+            <option value="icy.png">Big Ice</option>
+            <option value="mixed-precip.png">Mixed Precip</option>
+            <option value="dark-mixed-precip.png">Dark Mixed Precip</option>
+            <option value="rainy-tstorm.png">Rainy w/ Lightning</option>
+            <option value="dark-rainy-storm.png">Rainy w/ Lightning Dark</option>
+            <option value="tstorm.png">Lightning</option>
+            <option value="dark-tstorm.png">Dark Lightning</option>
+        </select>
+        <input type="file" id="day-two-file" accept="image/*" onchange="handleCustomUpload('two', event)">
+        <select id="day-two-day">
+            <option value="">--Choose an option--</option>
+            <option value="MON">Monday</option>
+            <option value="TUE">Tuesday</option>
+            <option value="WED">Wednesday</option>
+            <option value="THU">Thursday</option>
+            <option value="FRI">Friday</option>
+            <option value="SAT">Saturday</option>
+            <option value="SUN">Sunday</option>
+        </select>
+    <br>
+        <input type="text" placeholder="Day 3 Text" id="day-three-text">
+        <input type="text" placeholder="Day 3 High" id="day-three-high">
+        <input type="text" placeholder="Day 3 Low" id="day-three-low">
+        <select id="day-three-icon">
+            <option value="">--Choose an option--</option>
+            <option value="sunny.png">Sunny</option>
+            <option value="mostly-sunny.png">Mostly Sunny</option>
+            <option value="partly-sunny.png">Partly Sunny</option>
+            <option value="mostly-cloudy.png">Mostly Cloudy</option>
+            <option value="hazy-sunshine.png">Hazy Sunshine</option>
+            <option value="mostly-sunny-rain.png">Mostly Sunny w/ Rain</option>
+            <option value="mostly-sunny-dark-rain.png">Mostly Sunny w/ Dark Rain</option>
+            <option value="mostly-sunny-snow.png">Mostly Sunny w/ Snow</option>
+            <option value="mostly-sunny-dark-snowy.png">Mostly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-rain.png">Partly Sunny w/ Rain</option>
+            <option value="partly-sunny-dark-rain.png">Partly Sunny w/ Dark Rain</option>
+            <option value="partly-sunny-snowy.png">Partly Sunny w/ Snow</option>
+            <option value="partly-sunny-dark-snow.png">Partly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-mixed-precip.png">Partly Sunny w/ Mixed Precip</option>
+            <option value="partly-sunny-dark-mixed-precip.png">Partly Sunny w/ Dark Mixed Precip</option>
+            <option value="cloudy.png">Cloud</option>
+            <option value="dark-cloudy.png">Dark Cloud</option>
+            <option value="rainy.png">Rainy</option>
+            <option value="dark-rainy.png">Dark Rainy</option>
+            <option value="snowy.png">Snowy</option>
+            <option value="dark-snowy.png">Dark Snowy</option>
+            <option value="big-snow.png">Big Snowflake</option>
+            <option value="icy.png">Big Ice</option>
+            <option value="mixed-precip.png">Mixed Precip</option>
+            <option value="dark-mixed-precip.png">Dark Mixed Precip</option>
+            <option value="rainy-tstorm.png">Rainy w/ Lightning</option>
+            <option value="dark-rainy-storm.png">Rainy w/ Lightning Dark</option>
+            <option value="tstorm.png">Lightning</option>
+            <option value="dark-tstorm.png">Dark Lightning</option>
+        </select>
+        <input type="file" id="day-three-file" accept="image/*" onchange="handleCustomUpload('three', event)">
+        <select id="day-three-day">
+            <option value="">--Choose an option--</option>
+            <option value="MON">Monday</option>
+            <option value="TUE">Tuesday</option>
+            <option value="WED">Wednesday</option>
+            <option value="THU">Thursday</option>
+            <option value="FRI">Friday</option>
+            <option value="SAT">Saturday</option>
+            <option value="SUN">Sunday</option>
+        </select>
+        <br>
+        <input type="text" placeholder="Day 4 Text" id="day-four-text">
+        <input type="text" placeholder="Day 4 High" id="day-four-high">
+        <input type="text" placeholder="Day 4 Low" id="day-four-low">
+        <select id="day-four-icon">
+            <option value="">--Choose an option--</option>
+            <option value="sunny.png">Sunny</option>
+            <option value="mostly-sunny.png">Mostly Sunny</option>
+            <option value="partly-sunny.png">Partly Sunny</option>
+            <option value="mostly-cloudy.png">Mostly Cloudy</option>
+            <option value="hazy-sunshine.png">Hazy Sunshine</option>
+            <option value="mostly-sunny-rain.png">Mostly Sunny w/ Rain</option>
+            <option value="mostly-sunny-dark-rain.png">Mostly Sunny w/ Dark Rain</option>
+            <option value="mostly-sunny-snow.png">Mostly Sunny w/ Snow</option>
+            <option value="mostly-sunny-dark-snowy.png">Mostly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-rain.png">Partly Sunny w/ Rain</option>
+            <option value="partly-sunny-dark-rain.png">Partly Sunny w/ Dark Rain</option>
+            <option value="partly-sunny-snowy.png">Partly Sunny w/ Snow</option>
+            <option value="partly-sunny-dark-snow.png">Partly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-mixed-precip.png">Partly Sunny w/ Mixed Precip</option>
+            <option value="partly-sunny-dark-mixed-precip.png">Partly Sunny w/ Dark Mixed Precip</option>
+            <option value="cloudy.png">Cloud</option>
+            <option value="dark-cloudy.png">Dark Cloud</option>
+            <option value="rainy.png">Rainy</option>
+            <option value="dark-rainy.png">Dark Rainy</option>
+            <option value="snowy.png">Snowy</option>
+            <option value="dark-snowy.png">Dark Snowy</option>
+            <option value="big-snow.png">Big Snowflake</option>
+            <option value="icy.png">Big Ice</option>
+            <option value="mixed-precip.png">Mixed Precip</option>
+            <option value="dark-mixed-precip.png">Dark Mixed Precip</option>
+            <option value="rainy-tstorm.png">Rainy w/ Lightning</option>
+            <option value="dark-rainy-storm.png">Rainy w/ Lightning Dark</option>
+            <option value="tstorm.png">Lightning</option>
+            <option value="dark-tstorm.png">Dark Lightning</option>
+        </select>
+        <input type="file" id="day-four-file" accept="image/*" onchange="handleCustomUpload('four', event)">
+        <select id="day-four-day">
+            <option value="">--Choose an option--</option>
+            <option value="MON">Monday</option>
+            <option value="TUE">Tuesday</option>
+            <option value="WED">Wednesday</option>
+            <option value="THU">Thursday</option>
+            <option value="FRI">Friday</option>
+            <option value="SAT">Saturday</option>
+            <option value="SUN">Sunday</option>
+        </select>
+            <br>
+        <input type="text" placeholder="Day 5 Text" id="day-five-text">
+        <input type="text" placeholder="Day 5 High" id="day-five-high">
+        <input type="text" placeholder="Day 5 Low" id="day-five-low">
+        <select id="day-five-icon">
+            <option value="">--Choose an option--</option>
+            <option value="sunny.png">Sunny</option>
+            <option value="mostly-sunny.png">Mostly Sunny</option>
+            <option value="partly-sunny.png">Partly Sunny</option>
+            <option value="mostly-cloudy.png">Mostly Cloudy</option>
+            <option value="hazy-sunshine.png">Hazy Sunshine</option>
+            <option value="mostly-sunny-rain.png">Mostly Sunny w/ Rain</option>
+            <option value="mostly-sunny-dark-rain.png">Mostly Sunny w/ Dark Rain</option>
+            <option value="mostly-sunny-snow.png">Mostly Sunny w/ Snow</option>
+            <option value="mostly-sunny-dark-snowy.png">Mostly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-rain.png">Partly Sunny w/ Rain</option>
+            <option value="partly-sunny-dark-rain.png">Partly Sunny w/ Dark Rain</option>
+            <option value="partly-sunny-snowy.png">Partly Sunny w/ Snow</option>
+            <option value="partly-sunny-dark-snow.png">Partly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-mixed-precip.png">Partly Sunny w/ Mixed Precip</option>
+            <option value="partly-sunny-dark-mixed-precip.png">Partly Sunny w/ Dark Mixed Precip</option>
+            <option value="cloudy.png">Cloud</option>
+            <option value="dark-cloudy.png">Dark Cloud</option>
+            <option value="rainy.png">Rainy</option>
+            <option value="dark-rainy.png">Dark Rainy</option>
+            <option value="snowy.png">Snowy</option>
+            <option value="dark-snowy.png">Dark Snowy</option>
+            <option value="big-snow.png">Big Snowflake</option>
+            <option value="icy.png">Big Ice</option>
+            <option value="mixed-precip.png">Mixed Precip</option>
+            <option value="dark-mixed-precip.png">Dark Mixed Precip</option>
+            <option value="rainy-tstorm.png">Rainy w/ Lightning</option>
+            <option value="dark-rainy-storm.png">Rainy w/ Lightning Dark</option>
+            <option value="tstorm.png">Lightning</option>
+            <option value="dark-tstorm.png">Dark Lightning</option>
+        </select>
+        <input type="file" id="day-five-file" accept="image/*" onchange="handleCustomUpload('five', event)">
+        <select id="day-five-day">
+            <option value="">--Choose an option--</option>
+            <option value="MON">Monday</option>
+            <option value="TUE">Tuesday</option>
+            <option value="WED">Wednesday</option>
+            <option value="THU">Thursday</option>
+            <option value="FRI">Friday</option>
+            <option value="SAT">Saturday</option>
+            <option value="SUN">Sunday</option>
+        </select>
+            <br>
+        <input type="text" placeholder="Day 6 Text" id="day-six-text">
+        <input type="text" placeholder="Day 6 High" id="day-six-high">
+        <input type="text" placeholder="Day 6 Low" id="day-six-low">
+        <select id="day-six-icon">
+            <option value="">--Choose an option--</option>
+            <option value="sunny.png">Sunny</option>
+            <option value="mostly-sunny.png">Mostly Sunny</option>
+            <option value="partly-sunny.png">Partly Sunny</option>
+            <option value="mostly-cloudy.png">Mostly Cloudy</option>
+            <option value="hazy-sunshine.png">Hazy Sunshine</option>
+            <option value="mostly-sunny-rain.png">Mostly Sunny w/ Rain</option>
+            <option value="mostly-sunny-dark-rain.png">Mostly Sunny w/ Dark Rain</option>
+            <option value="mostly-sunny-snow.png">Mostly Sunny w/ Snow</option>
+            <option value="mostly-sunny-dark-snowy.png">Mostly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-rain.png">Partly Sunny w/ Rain</option>
+            <option value="partly-sunny-dark-rain.png">Partly Sunny w/ Dark Rain</option>
+            <option value="partly-sunny-snowy.png">Partly Sunny w/ Snow</option>
+            <option value="partly-sunny-dark-snow.png">Partly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-mixed-precip.png">Partly Sunny w/ Mixed Precip</option>
+            <option value="partly-sunny-dark-mixed-precip.png">Partly Sunny w/ Dark Mixed Precip</option>
+            <option value="cloudy.png">Cloud</option>
+            <option value="dark-cloudy.png">Dark Cloud</option>
+            <option value="rainy.png">Rainy</option>
+            <option value="dark-rainy.png">Dark Rainy</option>
+            <option value="snowy.png">Snowy</option>
+            <option value="dark-snowy.png">Dark Snowy</option>
+            <option value="big-snow.png">Big Snowflake</option>
+            <option value="icy.png">Big Ice</option>
+            <option value="mixed-precip.png">Mixed Precip</option>
+            <option value="dark-mixed-precip.png">Dark Mixed Precip</option>
+            <option value="rainy-tstorm.png">Rainy w/ Lightning</option>
+            <option value="dark-rainy-storm.png">Rainy w/ Lightning Dark</option>
+            <option value="tstorm.png">Lightning</option>
+            <option value="dark-tstorm.png">Dark Lightning</option>
+        </select>
+        <input type="file" id="day-six-file" accept="image/*" onchange="handleCustomUpload('six', event)">
+        <select id="day-six-day">
+            <option value="">--Choose an option--</option>
+            <option value="MON">Monday</option>
+            <option value="TUE">Tuesday</option>
+            <option value="WED">Wednesday</option>
+            <option value="THU">Thursday</option>
+            <option value="FRI">Friday</option>
+            <option value="SAT">Saturday</option>
+            <option value="SUN">Sunday</option>
+        </select>
+            <br>
+        <input type="text" placeholder="Day 7 Text" id="day-seven-text">
+        <input type="text" placeholder="Day 7 High" id="day-seven-high">
+        <select id="day-seven-icon">
+            <option value="">--Choose an option--</option>
+            <option value="sunny.png">Sunny</option>
+            <option value="mostly-sunny.png">Mostly Sunny</option>
+            <option value="partly-sunny.png">Partly Sunny</option>
+            <option value="mostly-cloudy.png">Mostly Cloudy</option>
+            <option value="hazy-sunshine.png">Hazy Sunshine</option>
+            <option value="mostly-sunny-rain.png">Mostly Sunny w/ Rain</option>
+            <option value="mostly-sunny-dark-rain.png">Mostly Sunny w/ Dark Rain</option>
+            <option value="mostly-sunny-snow.png">Mostly Sunny w/ Snow</option>
+            <option value="mostly-sunny-dark-snowy.png">Mostly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-rain.png">Partly Sunny w/ Rain</option>
+            <option value="partly-sunny-dark-rain.png">Partly Sunny w/ Dark Rain</option>
+            <option value="partly-sunny-snowy.png">Partly Sunny w/ Snow</option>
+            <option value="partly-sunny-dark-snow.png">Partly Sunny w/ Dark Snow</option>
+            <option value="partly-sunny-mixed-precip.png">Partly Sunny w/ Mixed Precip</option>
+            <option value="partly-sunny-dark-mixed-precip.png">Partly Sunny w/ Dark Mixed Precip</option>
+            <option value="cloudy.png">Cloud</option>
+            <option value="dark-cloudy.png">Dark Cloud</option>
+            <option value="rainy.png">Rainy</option>
+            <option value="dark-rainy.png">Dark Rainy</option>
+            <option value="snowy.png">Snowy</option>
+            <option value="dark-snowy.png">Dark Snowy</option>
+            <option value="big-snow.png">Big Snowflake</option>
+            <option value="icy.png">Big Ice</option>
+            <option value="mixed-precip.png">Mixed Precip</option>
+            <option value="dark-mixed-precip.png">Dark Mixed Precip</option>
+            <option value="rainy-tstorm.png">Rainy w/ Lightning</option>
+            <option value="dark-rainy-storm.png">Rainy w/ Lightning Dark</option>
+            <option value="tstorm.png">Lightning</option>
+            <option value="dark-tstorm.png">Dark Lightning</option>
+        </select>
+        <input type="file" id="day-seven-file" accept="image/*" onchange="handleCustomUpload('seven', event)">
+        <select id="day-seven-day">
+            <option value="">--Choose an option--</option>
+            <option value="MON">Monday</option>
+            <option value="TUE">Tuesday</option>
+            <option value="WED">Wednesday</option>
+            <option value="THU">Thursday</option>
+            <option value="FRI">Friday</option>
+            <option value="SAT">Saturday</option>
+            <option value="SUN">Sunday</option>
+        </select>
+
+    <br>
+
+    <input type="text" placeholder="Normal High" id="norm-high-input">
+    <input type="text" placeholder="Normal Low" id="norm-low-input">
+    <button onclick="updateGraphics()">Push Changes</button>
+
+    <!-- Put this inside your inputs div -->
+    <button onclick="downloadGraphic()">Save Graphic as PNG</button>
+
+    </div>
+</div>
+
+<div class="settings">
+    <h1>Settings</h1>
+    <div class="alerts">
+        <input type="text" placeholder="Alert title" id="alert-title">
+        <input type="text" placeholder="Alert subtitle" id="alert-subtitle">
+    </div>
+    <div class="images">
+        <div class="logo">
+            <p>Choose logo file (recommended 1:1 square scale)</p>
+            <input type="file" id="logo-file" accept="image/*" onchange="handleCustomUpload('logo', event)">
+        </div>
+        <div class="background-file">
+            <p>Choose background file</p>
+            <input type="file" id="background-file" accept="image/*" onchange="handleCustomUpload('background', event)">
+        </div>
+</div>
+    <div class="website">
+        <input type="text" placeholder="Bottom right title" id="bottomright-title">
+        <input type="text" placeholder="Website URL" id="web-url">
+    </div>
+    <button onclick="updateSettings()">Push Settings Changes</button>
+</div>
+
+<script src="html2canvas.min.js"></script>
+<script src="script.js?v=3"></script>
+
+
+
+</body>
+</html>

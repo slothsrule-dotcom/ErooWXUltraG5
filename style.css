@@ -1,0 +1,450 @@
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #D8D8D8;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphicDisplay {
+    width: 960px;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    background-image: url("Gradient.png");
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+
+.gradient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 22px;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar p {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#title {
+    width: 194px;
+    height: 68px;
+}
+
+.title {
+    background-color: #fff;
+    width: 900px;
+    height: 82.5px;
+    /* Use margin: auto for horizontal centering */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box; 
+    position: relative;
+    display: flex;
+    flex-direction: row; /* Changed to row so left and right elements sit side by side */
+    align-items: center; /* Centers all child elements vertically */
+    justify-content: space-between; /* Distributes space between left and right elements */
+}
+
+#left {
+    text-align: left;
+    color: #2c2c2c;
+    /* grid-column isn't needed unless .title is a grid */
+}
+
+#left h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    text-align: right;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#right h5 {
+    font-size: 14px !important;
+    margin-top: 36px;
+}
+
+#image {
+    height: 82.5px;
+    width: 82.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+#top {
+    width: 900px;
+    height: 17.5px;
+    background: linear-gradient(90deg, #EBFFF9, #A9F2E8, #3EE8BB, #24AF9C);
+}
+
+.dayCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.day-one,
+.day-two,
+.day-three,
+.day-four,
+.day-five,
+.day-six,
+.day-seven {
+    width: 121px;
+    height: 302px;
+    background: linear-gradient(
+    to bottom,
+    #A9F2E8 0% 12.61%,  
+    #fff 12.61% 59.50%,   
+    #A9F2E8 59.50% 100%
+  );
+    margin: 4.5px;
+    margin-top: 10px;
+}
+
+#date-one,
+#date-two,
+#date-three,
+#date-four,
+#date-five,
+#date-six,
+#date-seven {
+    height: 37.5px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+#date-one h2,
+#date-two h2,
+#date-three h2,
+#date-four h2,
+#date-five h2,
+#date-six h2,
+#date-seven h2 {
+    margin: 0;
+}
+
+#img-one,
+#img-two,
+#img-three,
+#img-four,
+#img-five,
+#img-six,
+#img-seven {
+    height: 46.89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-one img,
+#img-two img,
+#img-three img,
+#img-four img,
+#img-five img,
+#img-six img,
+#img-seven img {
+    height: 100px;
+    width: 100px;
+}
+
+.day-one h3,
+.day-two h3,
+.day-three h3,
+.day-four h3,
+.day-five h3,
+.day-six h3,
+.day-seven h3 {
+    font-size: 12.5px;
+    min-height: 18px;
+    margin-top: 7px;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 0;
+    font-weight: 800px;
+}
+
+.day-one h1,
+.day-two h1,
+.day-three h1,
+.day-four h1,
+.day-five h1,
+.day-six h1,
+.day-seven h1 {
+    font-size: 48px;
+    margin-top: 3px;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 0;
+    font-weight: 800px;
+}
+
+.day-one h2,
+.day-two h2,
+.day-three h2,
+.day-four h2,
+.day-five h2,
+.day-six h2,
+.day-seven h2 {
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: right;
+    margin-right: 7px;
+    white-space: nowrap;
+    font-weight: 800px;
+}
+
+#day-one-text, #day-one-high, #day-one-low,
+#day-two-text, #day-two-high, #day-two-low,
+#day-three-text, #day-three-high, #day-three-low,
+#day-four-text, #day-four-high, #day-four-low,
+#day-five-text, #day-five-high, #day-five-low,
+#day-six-text, #day-six-high, #day-six-low,
+#day-seven-text, #day-seven-high, #day-seven-low,
+#norm-high-input, #norm-low-input {
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+#day-one-icon, #day-one-day,
+#day-two-icon, #day-two-day,
+#day-three-icon, #day-three-day,
+#day-four-icon, #day-four-day,
+#day-five-icon, #day-five-day,
+#day-six-icon, #day-six-day,
+#day-seven-icon, #day-seven-day {
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inputs {
+    background: #fff;
+    width: 700px;
+    height: 540px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.inputs h2 {
+    margin-bottom: 2px;
+}
+
+.inputs p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.inputs button {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 1s;
+    background: #479384;
+}
+
+.inputs button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#insta {
+    width: fit-content;
+    background: linear-gradient(135deg, #850BFB, #FC01D8, #FE067A, #FFB901);
+}
+
+#insta h3,
+#facebook h3 {
+    font-size: 12px;
+    margin: 0;
+}
+
+#insta h1,
+#facebook h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+#facebook {
+    width: fit-content;
+    background: #0866FF;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-left {
+    height: 72px;
+    width: 598px;
+    margin-top: 22px;
+    background: linear-gradient(90deg, #93F0DF, #38DAB3);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.bottom-left h1, 
+.bottom-left h2{
+    margin: 0;
+    margin-left: 30px;
+}
+
+.bottom-left h1 {
+    font-size: 24px;
+}
+
+.bottom-left h2 {
+    font-size: 18px;
+}
+
+.bottom-right {
+    height: 72px;
+    width: 364px;
+    margin-top: 22px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+}
+
+.bottom-right h3, 
+.bottom-right h1 {
+    margin: 0;
+    margin-right: 30px;
+}
+
+.bottom-right h3 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.bottom-right h1 {
+    font-size: 32px;
+    font-weight: 900;
+    background-image: linear-gradient(to right, #ABF2E8, #4CE9C1, #24B09C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.settings {
+    background: #fff;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* Container for day card icons */
+.icon-container {
+    height: 46.89%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Clips anything trying to escape the box boundaries */
+}
+
+/* Default single icon size */
+.icon-container img {
+    max-height: 100px;
+    max-width: 100px;
+    object-fit: contain;
+    transition: all 0.2s ease;
+}
+
+/* When dual icons are active, stack them cleanly without overflowing the top */
+.icon-container.has-secondary {
+    justify-content: space-around;
+}
+
+/* Keep the main icon safely constrained so it never touches "MON" */
+.icon-container.has-secondary .main-icon {
+    max-height: 60px;
+    max-width: 60px;
+}
+
+/* Make the secondary icon large and prominent at the bottom */
+.icon-container.has-secondary .secondary-icon {
+    max-height: 65px !important;
+    max-width: 65px !important;
+    object-fit: contain;
+    display: block;
+}

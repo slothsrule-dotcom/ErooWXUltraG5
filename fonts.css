@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Montserrat.ttf') format('truetype-tech(variations)'),
+       url('Montserrat.ttf') format('truetype');
+  font-weight: 100 900; /* Opens up the full range of weights from Thin to Black */
+  font-style: normal;
+  font-display: swap; 
+}
