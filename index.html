@@ -46,8 +46,9 @@
                     <div id="date-two">
                         <h2>TUE</h2>
                     </div>
-                    <div id="img-two">
-                        <img src="icons/sunny.png" id="img">
+                    <div id="img-two" class="icon-container">
+                        <img src="icons/sunny.png" id="day-two-main" class="main-icon">
+                        <img src="" id="day-two-sec" class="secondary-icon" style="display: none;">
                     </div>
                     <h3 id="cond-two" style="margin-bottom: 7.5px;">Subtext here</h3>
                     <h1 id="high-two">NaN</h1>
@@ -57,8 +58,9 @@
                     <div id="date-three">
                         <h2>WED</h2>
                     </div>
-                    <div id="img-three">
-                        <img src="icons/sunny.png" id="img">
+                        <div id="img-three" class="icon-container">
+                        <img src="icons/sunny.png" id="day-three-main" class="main-icon">
+                        <img src="" id="day-three-sec" class="secondary-icon" style="display: none;">
                     </div>
                     <h3 id="cond-three" style="margin-bottom: 7.5px;">Subtext here</h3>
                     <h1 id="high-three">NaN</h1>
@@ -68,8 +70,9 @@
                     <div id="date-four">
                         <h2>THU</h2>
                     </div>
-                    <div id="img-four">
-                        <img src="icons/sunny.png" id="img">
+                    <div id="img-four" class="icon-container">
+                        <img src="icons/sunny.png" id="day-four-main" class="main-icon">
+                        <img src="" id="day-four-sec" class="secondary-icon" style="display: none;">
                     </div>
                     <h3 id="cond-four" style="margin-bottom: 7.5px;">Subtext here</h3>
                     <h1 id="high-four">NaN</h1>
@@ -79,8 +82,9 @@
                     <div id="date-five">
                         <h2>FRI</h2>
                     </div>
-                    <div id="img-five">
-                        <img src="icons/sunny.png" id="img">
+                    <div id="img-five" class="icon-container">
+                        <img src="icons/sunny.png" id="day-five-main" class="main-icon">
+                        <img src="" id="day-five-sec" class="secondary-icon" style="display: none;">
                     </div>
                     <h3 id="cond-five" style="margin-bottom: 7.5px;">Subtext here</h3>
                     <h1 id="high-five">NaN</h1>
@@ -90,8 +94,9 @@
                     <div id="date-six">
                         <h2>SAT</h2>
                     </div>
-                    <div id="img-six">
-                        <img src="icons/sunny.png" id="img">
+                    <div id="img-six" class="icon-container">
+                        <img src="icons/sunny.png" id="day-six-main" class="main-icon">
+                        <img src="" id="day-six-sec" class="secondary-icon" style="display: none;">
                     </div>
                     <h3 id="cond-six" style="margin-bottom: 7.5px;">Subtext here</h3>
                     <h1 id="high-six">NaN</h1>
@@ -101,8 +106,9 @@
                     <div id="date-seven">
                         <h2>SUN</h2>
                     </div>
-                    <div id="img-seven">
-                        <img src="icons/sunny.png" id="img">
+                    <div id="img-seven" class="icon-container">
+                        <img src="icons/sunny.png" id="day-seven-main" class="main-icon">
+                        <img src="" id="day-seven-sec" class="secondary-icon" style="display: none;">
                     </div>
                     <h3 id="cond-seven" style="margin-bottom: 7.5px;">Subtext here</h3>
                     <h1 id="high-seven">NaN</h1>
@@ -172,7 +178,6 @@
         </select>
         <div class="color-controls">
             <h3>Theme Color Customizer</h3>
-            <label>Global Teal Tone: <input type="color" id="global-teal-picker" value="#A9F2E8" onchange="updateGlobalColor(event)"></label>
             <label>Day 1 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
         </div>
         <div class="secondary-icon-upload">
@@ -226,6 +231,10 @@
             <option value="SAT">Saturday</option>
             <option value="SUN">Sunday</option>
         </select>
+        <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Day 2 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
+        </div>
     <br>
         <input type="text" placeholder="Day 3 Text" id="day-three-text">
         <input type="text" placeholder="Day 3 High" id="day-three-high">
@@ -262,6 +271,10 @@
             <option value="tstorm.png">Lightning</option>
             <option value="dark-tstorm.png">Dark Lightning</option>
         </select>
+        <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Day 3 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
+        </div>
         <input type="file" id="day-three-file" accept="image/*" onchange="handleCustomUpload('three', event)">
         <select id="day-three-day">
             <option value="">--Choose an option--</option>
@@ -320,6 +333,10 @@
             <option value="SAT">Saturday</option>
             <option value="SUN">Sunday</option>
         </select>
+        <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Day 4 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
+        </div>
             <br>
         <input type="text" placeholder="Day 5 Text" id="day-five-text">
         <input type="text" placeholder="Day 5 High" id="day-five-high">
@@ -367,6 +384,10 @@
             <option value="SAT">Saturday</option>
             <option value="SUN">Sunday</option>
         </select>
+        <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Day 5 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
+        </div>
             <br>
         <input type="text" placeholder="Day 6 Text" id="day-six-text">
         <input type="text" placeholder="Day 6 High" id="day-six-high">
@@ -414,6 +435,10 @@
             <option value="SAT">Saturday</option>
             <option value="SUN">Sunday</option>
         </select>
+        <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Day 6 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
+        </div>
             <br>
         <input type="text" placeholder="Day 7 Text" id="day-seven-text">
         <input type="text" placeholder="Day 7 High" id="day-seven-high">
@@ -460,7 +485,10 @@
             <option value="SAT">Saturday</option>
             <option value="SUN">Sunday</option>
         </select>
-
+        <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Day 7 Specific Accent: <input type="color" id="day-one-color-picker" value="#A9F2E8" onchange="updateCardColor('one', event)"></label>
+        </div>
     <br>
 
     <input type="text" placeholder="Normal High" id="norm-high-input">
@@ -488,7 +516,11 @@
             <p>Choose background file</p>
             <input type="file" id="background-file" accept="image/*" onchange="handleCustomUpload('background', event)">
         </div>
-</div>
+    </div>
+    <div class="color-controls">
+            <h3>Theme Color Customizer</h3>
+            <label>Global Teal Tone: <input type="color" id="global-teal-picker" value="#A9F2E8" onchange="updateGlobalColor(event)"></label>
+        </div>
     <div class="website">
         <input type="text" placeholder="Bottom right title" id="bottomright-title">
         <input type="text" placeholder="Website URL" id="web-url">
